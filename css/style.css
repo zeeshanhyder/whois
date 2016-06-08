@@ -1,0 +1,188 @@
+@font-face{
+    font-family: "Gotham Book";
+    src: url(fonts/Gotham-Light.otf);
+}
+@font-face{
+    font-family: "Gotham Black";
+    src: url(fonts/Gotham-Black.otf);
+}
+a{
+    text-decoration: none;
+    color:brown;
+    border-bottom: dotted thin;
+}
+.flex{
+    display: flex;
+}
+.flex-rem{
+    flex:1 1 0;
+}
+
+html{
+    height:100%;
+    width:100%;
+}
+body{
+    height:inherit;
+    width: inherit;
+    margin:0;
+    font-family: "Gotham Book","Lato Light","Helvetica","Helvetica-Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    background: #000;
+}
+::-webkit-scrollbar {
+   display: none;
+}
+
+.done{
+    margin-top: 200px;
+}
+.hide-message-btn{
+    padding: 30px;
+    border: solid 4px #000;
+    max-width: 300px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.hide-message-btn span{
+    font-size: 20px;
+    font-family: Arial,sans-serif;
+}
+
+.hide-message-btn:hover{
+    background: #000;
+    color:#fff;
+}
+
+.message{
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    z-index: 100;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 500ms ease-out;
+}
+#message-load{
+    z-index: 101;
+    transition: all 250ms ease-in;
+}
+.message .section-card{
+    color:#000;
+    text-align: center;
+}
+
+.img-loader{
+    position: absolute;
+    visibility: hidden;
+    top:-9999px;
+    left: -9999px;
+}
+#wrapper{
+    
+    height: inherit;
+    overflow: auto;
+    overflow-x: hidden;
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1000ms ease-in;
+}
+.section{
+    
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 0;
+    height: 100vh;
+    align-items: center;
+    background: transparent;
+    
+    
+}
+.section-even{
+    transform: translateX(50%);
+}
+.section-card{
+    width:60%;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+.section-card h3{
+    font-family: "Gotham Black",sans-serif;
+    font-size: 72px;
+    margin:0;
+    padding:20px 0;
+    color: rgba(0,0,0,0.35);
+   /* animation: animate-header 2s infinite; */
+    transition: all 250ms linear;
+}
+.section-card p{
+    font-size: 1.1em;
+    font-style: italic;
+    line-height: 1.5em;
+    
+}
+.section-card p:before{
+    content: " '' ";
+}
+
+.section-card p:after{
+    content:"''";
+}
+
+.section-hello{
+    background: rgba(142, 68, 173,0.2);
+    
+}
+.section-1{
+    background: rgba(41, 128, 185,0.25);
+}
+.section-2{
+    background: rgba(34, 49, 63,0.3);
+}
+.section-3{
+    background: rgba(192, 57, 43,0.35);
+}
+.section-4{
+    background: rgba(27, 163, 156,0.4);
+}
+
+.section-5{
+    background: rgba(145, 61, 136,0.45);
+}
+
+.section-6{
+    background: rgba(68,108,179,0.5);
+}
+
+.section-7{
+    background: rgba(38, 166, 91,0.55);
+}
+
+.section-8{
+    background: rgba(211, 84, 0,0.6);
+}
+
+.section-9{
+    background: rgba(108, 122, 137,0.65);
+}
+.hidden{
+    transform: scale(0);
+    transform-origin: center;
+    overflow: hidden;
+}
+.fade-in{
+    opacity: 1.0 !important;
+}
+
+@keyframes animate-header {
+    0% {color:rgba(0,0,0,0.2);}
+    50% {color:rgba(0,0,0,0.4);}
+    100% {color:rgba(0,0,0,0.2);}
+
+}
